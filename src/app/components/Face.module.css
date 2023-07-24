@@ -1,0 +1,115 @@
+.face {
+    height: 5em;
+    width: 5em;
+    outline: black 2px solid;
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.face > div {
+    display: flex;
+    justify-content: space-around;
+    height: 82%;
+    width: 82%;
+}
+
+.face > div > ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    padding: 0;
+    margin: 0;
+}
+
+
+.face > div > ul > div {
+    background-color: black;
+    border-radius: 100%;
+}
+
+.face.one > div > ul > div {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.face.two > div > ul > div {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.face.two > div :nth-child(2) :nth-child(1){
+    visibility: hidden;
+}
+
+.face.two > div :nth-child(1) :nth-child(2){
+    visibility: hidden;
+}
+
+.face.three > div > ul > div {
+    width: 1em;
+    height: 1em;
+}
+
+.face.three > div > ul > div {
+    visibility: hidden;
+}
+
+.face.three > div :nth-child(1) :nth-child(1) {
+    visibility: visible;
+}
+
+.face.three > div :nth-child(2) :nth-child(2) {
+    visibility: visible;
+}
+
+.face.three > div :nth-child(3) :nth-child(3) {
+    visibility: visible;
+}
+
+.face.four > div > ul > div {
+    width: 1em;
+    height: 1em;
+}
+
+.face.five > div > ul > div {
+    width: 1em;
+    height: 1em;
+}
+
+.face.five > div :nth-child(odd) :nth-child(even) {
+    visibility: hidden;
+}
+
+.face.five > div :nth-child(even) :nth-child(odd) {
+    visibility: hidden;
+}
+
+.face.six > div > ul > div {
+    width: 1em;
+    height: 1em;
+}
+
+.face.seven > div :nth-child(2) :nth-child(odd) {
+    visibility: hidden
+}
+
+.face.seven > div > ul > div {
+    width: 0.8em;
+    height: 0.8em;
+}
+
+.face.eight > div :nth-child(2) :nth-child(2) {
+    visibility: hidden
+}
+
+.face.eight > div > ul > div {
+    width: 0.8em;
+    height: 0.8em;
+}
+
+.face.nine > div > ul > div {
+    width: 0.8em;
+    height: 0.8em;
+}
