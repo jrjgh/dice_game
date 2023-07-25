@@ -1,8 +1,6 @@
-import Image from 'next/image'
-import styles from './page.module.css'
-import {One, Two, Three, Four, Five, Six, Seven, Eight, Nine} from './components/Face'
+import {One, Two, Three, Four, Five, Six, Seven, Eight, Nine} from '../../components/Face'
 
-export default function Home() {
+export default function DiceTest() {
     return (
         <main>
             <One scale={"50%"}/>
