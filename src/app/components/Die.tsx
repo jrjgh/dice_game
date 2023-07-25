@@ -2,7 +2,7 @@
 import styles from './Die.module.css'
 import {Die as d, Face as f} from '../../game/dice.ts'
 import {Eight, Five, Four, Nine, One, Seven, Six, Three, Two} from "@/app/components/Face";
-import {useState} from "react";
+import {Dispatch, SetStateAction, useState} from "react";
 
 export default function Die(props: {die: d, showing: number}) {
 
@@ -17,11 +17,11 @@ export default function Die(props: {die: d, showing: number}) {
     )
 }
 
-function roll(die, setShowing, e) {
+function roll(die: d, setShowing:Dispatch<SetStateAction<number>>, e) {
     e.preventDefault()
     console.log(die)
-    d.roll()
-    setShowing(this.showingFace)
+    die.roll()
+    setShowing(die.showingFace)
 }
 
 function renderFace(face: f) {

@@ -1,3 +1,5 @@
+"use client"
+
 import {Face, NumberPip, Die as d} from "@/game/dice";
 import Die from "@/app/components/Die";
 
