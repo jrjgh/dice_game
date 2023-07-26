@@ -5,12 +5,12 @@ export enum Pip {
 }
 
 // //one side of a die
-export type Face = {
+export interface Face {
     pips: Pip[],
     name: string,
 }
 
-export type Effect = {
+export interface Effect {
     value: number,
     healing: number,
     damage: number
@@ -33,7 +33,7 @@ export function effect(f: Face) {
     }, {value: 0, healing: 0, damage: 0})
 }
 
-export type Die = {
+export interface Die {
     sides: number,
     faces: Face[],
     showingFace: number,
