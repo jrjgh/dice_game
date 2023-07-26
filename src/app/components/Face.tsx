@@ -116,7 +116,7 @@ export function Eight(props) {
 
 export function Nine(props) {
     return (
-        <div className={c(styles.face, styles.nine)} style={{scale: props.scale}}>
+        <div className={styles.face} style={{scale: props.scale}}>
             <div className={styles.g33}>
                 <NumberPip />
                 <NumberPip />
