@@ -8,108 +8,126 @@
     justify-content: center;
 }
 .face > div {
-    display: flex;
-    justify-content: space-around;
     height: 82%;
     width: 82%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
 }
 
-.face > div > ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-
-    padding: 0;
-    margin: 0;
-}
-
-
-.face > div > ul > div {
-    background-color: black;
-    border-radius: 100%;
-}
-
-.face.one > div > ul > div {
+.face.one > div > :global(.pip) {
     width: 1.5em;
     height: 1.5em;
 }
 
-.face.two > div > ul > div {
-    width: 1.5em;
-    height: 1.5em;
+.g22 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 }
 
-.face.two > div :nth-child(2) :nth-child(1){
-    visibility: hidden;
+.face.two > div :nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
 }
 
-.face.two > div :nth-child(1) :nth-child(2){
-    visibility: hidden;
+.face.two > div :nth-child(2) {
+    grid-column: 2;
+    grid-row: 2;
 }
 
-.face.three > div > ul > div {
+.face.two > div > :global(.pip) {
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.g33 {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.g33 > :global(.pip) {
     width: 1em;
     height: 1em;
 }
 
-.face.three > div > ul > div {
-    visibility: hidden;
+.face.three > div :nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
 }
 
-.face.three > div :nth-child(1) :nth-child(1) {
-    visibility: visible;
+.face.three > div :nth-child(2) {
+    grid-column: 2;
+    grid-row: 2;
 }
 
-.face.three > div :nth-child(2) :nth-child(2) {
-    visibility: visible;
+.face.three > div :nth-child(3) {
+    grid-column: 3;
+    grid-row: 3;
 }
 
-.face.three > div :nth-child(3) :nth-child(3) {
-    visibility: visible;
-}
-
-.face.four > div > ul > div {
+.face.three > div > :global(.pip) {
     width: 1em;
     height: 1em;
 }
 
-.face.five > div > ul > div {
+.face.four > div :global(.pip) {
     width: 1em;
     height: 1em;
 }
 
-.face.five > div :nth-child(odd) :nth-child(even) {
-    visibility: hidden;
-}
-
-.face.five > div :nth-child(even) :nth-child(odd) {
-    visibility: hidden;
-}
-
-.face.six > div > ul > div {
+.face.five > div :global(.pip) {
     width: 1em;
     height: 1em;
 }
 
-.face.seven > div :nth-child(2) :nth-child(odd) {
-    visibility: hidden
+.face.five > div :nth-child(2) {
+    grid-column: 3;
+    grid-row: 1;
 }
 
-.face.seven > div > ul > div {
-    width: 0.8em;
-    height: 0.8em;
+.face.five > div :nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
 }
 
-.face.eight > div :nth-child(2) :nth-child(2) {
-    visibility: hidden
+.face.five > div :nth-child(4) {
+    grid-column: 1;
+    grid-row: 3;
 }
 
-.face.eight > div > ul > div {
-    width: 0.8em;
-    height: 0.8em;
+.face.five > div :nth-child(5) {
+    grid-column: 3;
+    grid-row: 3;
 }
 
-.face.nine > div > ul > div {
-    width: 0.8em;
-    height: 0.8em;
+.face.six > div :global(.pip) {
+    width: 1em;
+    height: 1em;
+}
+
+.face.six > div {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.face.seven > div :nth-child(2n + 1) {
+    grid-column: 1;
+}
+
+.face.seven > div :nth-child(2n) {
+    grid-column: 3;
+}
+
+.face.seven > div :nth-child(7) {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.face.seven > div :global(.pip) {
+    width: 1em;
+    height: 1em;
+}
+
+.face.eight > div :nth-child(5) {
+    grid-column: 3;
 }
