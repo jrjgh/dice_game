@@ -1,15 +1,26 @@
-export type Game = {
+import {Equipment} from './equipment'
+import {Enemy} from './npc'
+
+export interface Game {
     state: GameState,
 }
 
-type GameState = {
+interface GameState {
     player: Player,
 }
 
-type Player = {
-   inventory: Inventory,
+interface Player {
+    inventory: Inventory,
+    health: number,
+    experience: number,
+    equipment: Equipment,
 }
 
-type Inventory = {
+interface Inventory {
 
 }
+
+interface Battle {
+    enemies: Enemy[],
+}
+

@@ -44,6 +44,7 @@ export function Four(props) {
             <div className={styles.g22}>
                 <NumberPip />
                 <NumberPip />
+
                 <NumberPip />
                 <NumberPip />
             </div>
@@ -57,7 +58,9 @@ export function Five(props) {
             <div className={styles.g33}>
                 <NumberPip />
                 <NumberPip />
+
                 <NumberPip />
+
                 <NumberPip />
                 <NumberPip />
             </div>
@@ -72,6 +75,7 @@ export function Six(props) {
                 <NumberPip />
                 <NumberPip />
                 <NumberPip />
+
                 <NumberPip />
                 <NumberPip />
                 <NumberPip />
@@ -87,7 +91,9 @@ export function Seven(props) {
                 <NumberPip />
                 <NumberPip />
                 <NumberPip />
+
                 <NumberPip />
+
                 <NumberPip />
                 <NumberPip />
                 <NumberPip />
@@ -104,6 +110,7 @@ export function Eight(props) {
                 <NumberPip />
                 <NumberPip />
                 <NumberPip />
+
                 <NumberPip />
                 <NumberPip />
                 <NumberPip />
@@ -121,9 +128,11 @@ export function Nine(props) {
                 <NumberPip />
                 <NumberPip />
                 <NumberPip />
+
                 <NumberPip />
                 <NumberPip />
                 <NumberPip />
+
                 <NumberPip />
                 <NumberPip />
                 <NumberPip />
