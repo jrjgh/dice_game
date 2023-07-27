@@ -1,3 +1,4 @@
+import {randomIndex} from '@/util/random'
 export enum Pip {
     Number,
     Healing,
@@ -44,6 +45,6 @@ export interface Die {
 }
 
 export function roll(d: Die): Die {
-    d.showingFace = Math.floor(Math.random() * d.sides)
+    d.showingFace = randomIndex(d.faces)
     return d
 }
