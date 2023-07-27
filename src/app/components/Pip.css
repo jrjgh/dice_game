@@ -1,5 +1,32 @@
 
-.pip {
+.pip.number {
     background-color: black;
     border-radius: 100%;
+}
+
+.pip.damage {
+    /*background-color: white;*/
+    /*border-radius: 0%;*/
+    /*color: black;*/
+    /*height: 15em;*/
+    /*width: 15em;*/
+    transform: rotate(90deg);
+}
+
+.damage img {
+    scale: 250%;
+}
+
+.healing img {
+    scale: 210%;
+}
+
+.armor img {
+    scale: 230%;
+}
+
+.pip img {
+    /*object-fit: cover;*/
+    height: inherit;
+    width: inherit;
 }
