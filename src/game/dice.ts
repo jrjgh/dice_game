@@ -18,7 +18,20 @@ export interface Effect {
     armor: number,
 }
 
-export function effect(f: Face) {
+function addEffects(e1: Effect, e2: Effect): Effect {
+    return {
+        value: e1.value + e2.value,
+        healing: e1.healing + e2.healing,
+        damage: e1.damage + e2.damage,
+        armor: e1.armor + e2.armor,
+    }
+}
+
+export function sumEffects(es: Effect[]): Effect {
+    return es.reduce(addEffects, {value: 0, healing: 0, armor: 0, damage: 0})
+}
+
+export function effect(f: Face): Effect {
     return f.pips.reduce(function(acc: Effect, pip: Pip) {
         switch (pip) {
             case Pip.Number:

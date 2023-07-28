@@ -5,16 +5,18 @@ export interface Character {
     name: string;
 }
 
-export interface Combatant extends Character {
+export type Combatant = Player | Enemy;
+
+export interface Enemy extends Character {
     health: Health,
     equipment: Equipment,
     block?: number,
 }
 
-export interface Enemy extends Combatant {
-}
-
-export interface Player extends Combatant {
+export interface Player extends Character {
+    health: Health,
+    equipment: Equipment,
+    block?: number,
     inventory: Inventory,
     experience: number,
 }

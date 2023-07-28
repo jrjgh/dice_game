@@ -27,7 +27,7 @@ function StatsWindow(props) {
                    low={character.health.max/3}
             max={character.health.max}
             value={character.health.current}
-            ></meter><p>{character.health.current}/{character.health.max}</p>
+            ></meter><p className={"healthCount"}>{character.health.current}/{character.health.max}</p>
         </div>
     )
 }

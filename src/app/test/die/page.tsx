@@ -8,12 +8,12 @@ export default function DiceTest() {
     let theOneDie: d = {
         sides: 6,
         faces: [
-           {name: "one", pips: [Pip.Number]},
-            {name: "two", pips: [Pip.Number, Pip.Number]},
-            {name: "three", pips: [Pip.Number, Pip.Number, Pip.Number]},
-            {name: "four", pips: [Pip.Number, Pip.Number, Pip.Number, Pip.Number]},
-            {name: "five", pips: [Pip.Number, Pip.Number, Pip.Number, Pip.Number, Pip.Number]},
-            {name: "six", pips: [Pip.Number, Pip.Number, Pip.Number, Pip.Number, Pip.Number, Pip.Number]},
+           {pips: [Pip.Number]},
+            {pips: [Pip.Number, Pip.Number]},
+            {pips: [Pip.Number, Pip.Number, Pip.Number]},
+            {pips: [Pip.Number, Pip.Number, Pip.Number, Pip.Number]},
+            {pips: [Pip.Number, Pip.Number, Pip.Number, Pip.Number, Pip.Number]},
+            {pips: [Pip.Number, Pip.Number, Pip.Number, Pip.Number, Pip.Number, Pip.Number]},
         ],
         showingFace: 0
     }

@@ -15,9 +15,15 @@
 }
 
 .stats {
+    padding: 1em;
     row: 1;
     border: black solid 1px;
 }
+
+.stats > .healthCount {
+    margin-top: 0;
+}
+
 .window {
     row: 2;
     border: black solid 1px;
