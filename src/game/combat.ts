@@ -1,3 +1,4 @@
+import {State} from '@/game/game'
 import {Die, Effect, roll, effect, sumEffects} from '@/game/dice'
 import {Combatant, Player, Enemy} from '@/game/character'
 
@@ -29,7 +30,7 @@ type CombatResult = {
     enemy: Enemy,
 }
 
-function getActiveDice(p: Player, e: Enemy): PreRoll {
+export function getActiveDice(p: Player, e: Enemy): PreRoll {
     const playerDice = Object.values(p.equipment).map(e => e.dice).flat()
     const enemyDice = Object.values(e.equipment).map(e => e.dice).flat()
 
@@ -78,4 +79,12 @@ function applyEffects(ce: CombatEffects): CombatResult {
         player: applyStrike(ce.enemyEffect, applyPreStrike(ce.playerEffect, ce.player)),
         enemy: applyStrike(ce.playerEffect, applyPreStrike(ce.enemyEffect, ce.enemy)),
     }
+}
+
+export function combatRound(s: State): State {
+    const preRoll: PreRoll = getActiveDice(s.player, s.combat.enemy)
+    const result = applyEffects(addEffects(rollAll(preRoll)))
+    s.player = result.player
+    s.combat.enemy = result.enemy
+    return s
 }

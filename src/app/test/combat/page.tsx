@@ -34,5 +34,5 @@ const initialState: State = {
 
 export default function CombatTest() {
    const [state, updateState] = useState(initialState)
-    return <Combat state={state} updateState={updateState}/>
+    return <Combat state={state} update={updateState}/>
 }
