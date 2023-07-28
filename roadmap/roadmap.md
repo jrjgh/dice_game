@@ -6,20 +6,25 @@
 
 ## pips
 - [x] number pip (???)
-- [ ] damage pip (attack)
-- [ ] healing pip (action)
+- [x] damage pip (attack)
+- [x] healing pip (action)
+- [ ] armor pip
 - [ ] monster pip (dungeon)
 - [ ] door pip (dungeon)
 
 
 ## dice
 - [x] a die can be rolled
-- [ ] a die can be displayed/rendered with different types of pips
+- [x] pip is own component
+- [x] a die can be displayed/rendered with different types of pips
+- [x] damage pip
+- [x] healing pip
+- [x] armor pip
 
 ## battle
 ### MVP level 1
-- [ ] user rolls their attack die against one enemy's health die
-- [ ] the enemy fights back, damaging player's HP
+- [x] user rolls their attack die against one enemy's health die
+- [x] the enemy fights back, damaging player's HP
 - [ ] battle can end in some way
 - [ ] multiple battles can take place in continuous game flow (one ends, another begins)
 
