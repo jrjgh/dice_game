@@ -9,7 +9,6 @@ export enum Pip {
 // //one side of a die
 export interface Face {
     pips: Pip[],
-    name: string,
 }
 
 export interface Effect {

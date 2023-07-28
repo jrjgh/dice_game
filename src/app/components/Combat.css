@@ -1,0 +1,32 @@
+#combatWindow {
+    height: 50em;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 20% 80%;
+    border: black solid 2px;
+}
+
+.player {
+    column: 1;
+}
+
+.enemy {
+    column: 2;
+}
+
+.stats {
+    row: 1;
+    border: black solid 1px;
+}
+.window {
+    row: 2;
+    border: black solid 1px;
+}
+
+.player.window {
+    background-color: #79d379;
+}
+
+.enemy.window {
+    background-color: #f39090;
+}

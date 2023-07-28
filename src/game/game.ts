@@ -1,23 +1,31 @@
-import {Equipment} from './equipment'
-import {Enemy} from './npc'
+import {Player, Enemy} from './character'
 
 export interface Game {
-    state: GameState,
+    state: State,
 }
 
-interface GameState {
+export enum Status {
+    Default,
+    Combat,
+}
+
+export interface State {
+    status: Status,
     player: Player,
+    combat?: Combat,
 }
 
-interface Player {
-    inventory: Inventory,
-    health: number,
-    experience: number,
-    equipment: Equipment,
+export interface Health {
+    max: number,
+    current: number,
 }
 
-interface Inventory {
+export interface Inventory {
 
+}
+
+interface Combat {
+    enemy: Enemy,
 }
 
 interface Battle {
