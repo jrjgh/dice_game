@@ -26,7 +26,8 @@ const initialState: State = {
                 current: 8,
             },
             equipment: {
-                head: RodentMaw
+                head: RodentMaw,
+
             }
         }
     }

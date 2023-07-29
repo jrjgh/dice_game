@@ -8,7 +8,7 @@
 - [x] number pip (???)
 - [x] damage pip (attack)
 - [x] healing pip (action)
-- [ ] armor pip
+- [x] armor pip
 - [ ] monster pip (dungeon)
 - [ ] door pip (dungeon)
 

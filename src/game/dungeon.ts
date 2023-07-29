@@ -1,0 +1,4 @@
+//entrance
+//exit
+//monster
+//treasure

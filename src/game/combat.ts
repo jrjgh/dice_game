@@ -1,6 +1,6 @@
-import {State} from '@/game/game'
+import {checkGameState, State} from '@/game/game'
 import {Die, Effect, roll, effect, sumEffects} from '@/game/dice'
-import {Combatant, Player, Enemy} from '@/game/character'
+import {Player, Enemy} from '@/game/character'
 
 type PreRoll = {
     player: Player,
@@ -86,5 +86,7 @@ export function combatRound(s: State): State {
     const result = applyEffects(addEffects(rollAll(preRoll)))
     s.player = result.player
     s.combat.enemy = result.enemy
+    s = checkGameState(s)
+
     return s
 }

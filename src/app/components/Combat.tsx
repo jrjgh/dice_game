@@ -8,10 +8,7 @@ export default function Combat(props) {
     const activeDice = getActiveDice(state.player, state.combat.enemy)
     const update = props.update
 
-    function handleClick(e) {
-        e.preventDefault()
-        console.log("click")
-        console.log(state)
+    function handleClick() {
         update(structuredClone(combatRound(state)))
     }
 
